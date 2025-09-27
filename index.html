@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفصول التفاعلية المتقدمة</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bg-music" loop>
+  <source src="sounds/background.mp3" type="audio/mp3">
+</audio>
+<audio id="door-sound">
+  <source src="sounds/door.mp3" type="audio/mp3">
+</audio>
+
+<div class="door-container">
+  <h1>اختر المادة</h1>
+  <div class="doors">
+    <div class="door" onclick="openClass('biology')">أحياء</div>
+    <div class="door" onclick="openClass('chemistry')">كيمياء</div>
+    <div class="door" onclick="openClass('physics')">فيزياء</div>
+    <div class="door" onclick="openClass('history')">تاريخ</div>
+    <div class="door" onclick="openClass('tech')">تقنية</div>
+    <div class="door" onclick="openClass('math')">رياضيات</div>
+  </div>
+</div>
+
+<div class="classroom" id="classroom">
+  <button class="close-btn" onclick="closeClass()">❌ اغلاق الفصل</button>
+  <div id="content"></div>
+  <div class="interactive-buttons">
+    <button onclick="changeContent('info')">المحتوى الأساسي</button>
+    <button onclick="changeContent('quiz')">اختبار سريع</button>
+    <button onclick="changeContent('video')">مشاهدة فيديو</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
